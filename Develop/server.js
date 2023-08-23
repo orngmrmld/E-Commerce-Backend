@@ -14,3 +14,11 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
+
+//1. Connect using sequeilize 
+
+//2. Get models set up
+
+//3. Set up associations 
+
+//4. Work on routes
