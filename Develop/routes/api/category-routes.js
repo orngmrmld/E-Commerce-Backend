@@ -19,7 +19,8 @@ router.get('/:id', (req, res) => {
   Category.findOne({
     where: {
       id: req.params.id
-    }
+    },
+    include: [Product]    
   })
   .then((model) => res.json(model))
   .catch((err) => res.json(err));
@@ -27,6 +28,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
+  Category.create(req.body)  
+  .then((model) => res.json(model))
+  .catch((err) => res.json(err));
 });
 
 router.put('/:id', (req, res) => {
